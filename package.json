@@ -10,8 +10,11 @@
   "dependencies": {
     "antd": "^4.6.2",
     "next": "9.5.3",
+    "next-redux-wrapper": "^6.0.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5"
   },
   "devDependencies": {
     "@types/node": "^14.6.3",
