@@ -39,7 +39,9 @@ export const SelectMenu: React.FC<PropsSelect> = ({ menuType }) => {
       }
     >
       {menuType.map((name, key) => (
-        <Option value={key}>{name}</Option>
+        <Option key={key} value={key}>
+          {name}
+        </Option>
       ))}
     </Select>
   );
