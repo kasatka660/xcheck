@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Select } from "antd";
-import { task, user } from "../../../data/data";
 
 type PropsSelect = {
   menuType: any[];
