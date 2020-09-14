@@ -1,23 +1,14 @@
 import React from "react";
 import Layout from "../components/Layout";
-
-const InnerComponent = () => {
-  return <div>Test</div>;
-};
+import SelectMenu from "../components/FormElements/Select/index";
+import { task, user } from "../data/data";
 
 const Home: React.FC = () => {
   return (
     <Layout>
       <h1>Hello World</h1>
-      <div>
-        {() => {
-          return <div>Test</div>;
-        }}
-      </div>
-
-      <div>
-        <InnerComponent />
-      </div>
+      <SelectMenu menuType={task.id}></SelectMenu>
+      <SelectMenu menuType={user.roles}></SelectMenu>
     </Layout>
   );
 };

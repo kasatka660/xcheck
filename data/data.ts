@@ -6,7 +6,7 @@ export const user = {
 };
 
 export const task = {
-  id: "simple-task-v1",
+  id: ["simple-task-v1", "simple-task-v2", "simple-task-v3"],
   author: "cardamo",
   state: "DRAFT", // enum [DRAFT, PUBLISHED, ARCHIVED]
   categoriesOrder: ["Basic Scope", "Extra Scope", "Fines"],
