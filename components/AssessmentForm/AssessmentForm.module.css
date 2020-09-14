@@ -1,17 +1,8 @@
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
+    padding: 30px;
     margin:  auto;
-    border: 1px solid black;
+    background: #F8EFEF;
+    border-radius: 10px;
 }
 
-.radioButtonsBlock > * {
-    display: block;
-}
-
-.estimateInput > * {
-    display: block;
-}
-
-.maxPointBadge > span {
-    display: block;
-}

@@ -12,7 +12,7 @@ export const task = {
   categoriesOrder: ["Basic Scope", "Extra Scope", "Fines"],
   items: [
     {
-      id: "basic_p1",
+      id: "1",
       minScore: 0,
       maxScore: 20,
       category: "Basic Scope",
@@ -20,7 +20,7 @@ export const task = {
       description: "You need to make things right, not wrong",
     },
     {
-      id: "extra_p1",
+      id: "2",
       minScore: 0,
       maxScore: 30,
       category: "Extra Scope",
@@ -28,7 +28,7 @@ export const task = {
       description: "Be creative and make up some more awesome things",
     },
     {
-      id: "fines_p1",
+      id: "3",
       minScore: -10,
       maxScore: 0,
       category: "Fines",
@@ -36,7 +36,7 @@ export const task = {
       description: "App causes BSoD!",
     },
     {
-      id: "basic_p1",
+      id: "4",
       minScore: 0,
       maxScore: 20,
       category: "Basic Scope",
@@ -44,7 +44,7 @@ export const task = {
       description: "You need to make things right, not wrong",
     },
     {
-      id: "extra_p1",
+      id: "5",
       minScore: 0,
       maxScore: 30,
       category: "Extra Scope",
@@ -52,7 +52,7 @@ export const task = {
       description: "Be creative and make up some more awesome things",
     },
     {
-      id: "fines_p1",
+      id: "6",
       minScore: -10,
       maxScore: 0,
       category: "Fines",
