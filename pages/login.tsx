@@ -1,8 +1,16 @@
-import React from "react";
-import TaskForm from "../components/Login/index";
+import React from 'react';
+import { InputID} from "../components/Login/inputID";
+import { Button_Login} from "../components/Login/buttonLogin";
+import { Title_Login} from "../components/Login/title";
 
-const page = () => {
-  return <h1>{TaskForm}</h1>;
+export default function LoginForm() {
+  return (
+    <>
+      <form>
+        <Title_Login />
+        <InputID />
+        <Button_Login />
+      </form>
+    </>
+  )
 }
-
-export default page;
