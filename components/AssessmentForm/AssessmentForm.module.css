@@ -6,3 +6,19 @@
     border-radius: 10px;
 }
 
+.TotalPoints {
+    margin-top: 20px;
+}
+
+.TotalRow {
+    margin: 30px 0 50px;
+}
+
+.TaskScope {
+    color: #1890ff;
+}
+
+.ButtonsRow {
+    text-align: center;
+}
+
