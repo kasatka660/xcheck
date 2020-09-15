@@ -21,7 +21,7 @@ const page: React.FC = () => {
   };
 
   return (
-    <Layout>
+    <Layout withHeader={true}>
       <Row className="AlignCenter">
         <Col span={24}>
           <SelectMenu

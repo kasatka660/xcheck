@@ -1,0 +1,9 @@
+.UserInfo {
+    margin-top: 16px;
+}
+
+.UserInfo > span {
+    display: block;
+    color: #0070f3;
+    line-height: 16px;
+}
