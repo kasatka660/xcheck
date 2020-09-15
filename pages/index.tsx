@@ -1,14 +1,12 @@
 import React from "react";
 import Layout from "../components/Layout";
-import SelectMenu from "../components/FormElements/Select/index";
-import { task, user } from "../data/data";
+import { Header } from "../components/Header";
 
 const Home: React.FC = () => {
   return (
     <Layout>
+      <Header />
       <h1>Hello World</h1>
-      <SelectMenu menuType={task.id}></SelectMenu>
-      <SelectMenu menuType={user.roles}></SelectMenu>
     </Layout>
   );
 };
