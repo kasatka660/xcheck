@@ -8,6 +8,7 @@ export const Header: React.FC = () => {
        <>
        <Navbar />
        <Userinfo />
-       </>
+      </>
+       
    )
 }
