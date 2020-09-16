@@ -35,7 +35,7 @@ class App extends Component {
           <span>
             <h2>Sing in to XCheck</h2>
             <div>Signed In!</div>
-            <h3>Welcome to XCheck</h3>
+            <h3>Welcome to XCheck, {firebase.auth().currentUser.email}</h3>
             <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
 
           </span>
