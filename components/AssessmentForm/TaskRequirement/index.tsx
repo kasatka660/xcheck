@@ -34,7 +34,7 @@ const TaskRequirement: React.FC<{
           }
         />
       </Col>
-      <Col span={12}>
+      <Col span={13}>
         <h4>{requirement.title}</h4>
         <p className={styles.RequirementDescription}>
           {requirement.description}
@@ -54,7 +54,7 @@ const TaskRequirement: React.FC<{
           />
         )}
       </Col>
-      <Col span={6}>
+      <Col span={4}>
         <div className={styles.RadioButtonsBlock}>
           {!isRequirementInFineScope && (
             <Radio.Group
@@ -100,10 +100,19 @@ const TaskRequirement: React.FC<{
           )}
         </div>
       </Col>
-      <Col span={2}>{isCrossCheck && <span>100</span>}</Col>
+      <Col span={3} style={{ textAlign: "center" }}>
+        {isCrossCheck && (
+          <>
+            <span style={{ fontSize: "10px" }}>Student's estimate</span>
+            <span style={{ display: "block" }}>10</span>
+          </>
+        )}
+      </Col>
       <Col span={2}>
         <div className={styles.ScoreEstimate}>
-          <label htmlFor="estimate">Your estimate</label>
+          <label htmlFor="estimate" style={{ fontSize: "10px" }}>
+            Your estimate
+          </label>
           <InputNumber
             className={styles.EstimateInput}
             id="estimate"

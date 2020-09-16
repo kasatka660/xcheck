@@ -35,14 +35,12 @@ const page: React.FC = () => {
         <>
           <Row className="AlignCenter">
             <Col span={24}>
-              <Form.Item>
-                <Input placeholder="Link to your demo" style={{ width: 400 }} />
-              </Form.Item>
-            </Col>
-            <Col span={24}>
-              <Form.Item>
-                <Input placeholder="Link to your PR" style={{ width: 400 }} />
-              </Form.Item>
+              <div>
+                <a>Link to student's demo</a>
+              </div>
+              <div>
+                <a>Link to student's PR</a>
+              </div>
             </Col>
           </Row>
           <AssessmentForm

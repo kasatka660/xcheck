@@ -103,7 +103,16 @@ const AssessmentForm: React.FC<{
                 <Col span={18}>
                   <h2 className={styles.TotalPoints}>TOTAL</h2>
                 </Col>
-                <Col span={4}>
+                <Col span={2}>
+                  {isCrossCheck && (
+                    <>
+                      <span style={{}}>Student's estimate</span>
+                      <h2>100</h2>
+                    </>
+                  )}
+                </Col>
+
+                <Col span={2}>
                   <span>Your estimate</span>
                   <h2>{countTotal(values.items, "estimate")}</h2>
                 </Col>
