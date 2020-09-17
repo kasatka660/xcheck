@@ -9,7 +9,7 @@ if (firebase.apps.length === 0) {
   });
 }
 
-class App extends Component {
+class Login extends Component {
   state = { isSignedIn: false };
   uiConfig = {
     signInFlow: "popup",
@@ -22,18 +22,18 @@ class App extends Component {
   };
 
   public componentDidMount = () => {
-    firebase.auth().onAuthStateChanged(user => {
-      this.setState({ isSignedIn: !!user });
-      console.log("user", user);
+      firebase.auth().onAuthStateChanged(user => {
+        this.setState({ isSignedIn: !!user })
+        console.log("user", user);
     });
   };
 
   public render() {
     return (
       <div className="App">
+        <h2>Sing in to XCheck</h2>
         {this.state.isSignedIn ? (
           <span>
-            <h2>Sing in to XCheck</h2>
             <div>Signed In!</div>
             <h3>Welcome to XCheck, {firebase.auth().currentUser.email}</h3>
             <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
@@ -47,4 +47,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Login;
