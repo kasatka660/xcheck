@@ -1,0 +1,33 @@
+/*html{*/
+/*    background-color: #E5E5E5;*/
+/*}*/
+.wrap{
+    margin-left: auto;
+    margin-right: auto;
+    width: 384px;
+    height: 480px;
+    background-color: #FFFFFF;
+    box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.25);
+}
+.wrap_form{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.title,
+.title_welcome,
+.title_role{
+    padding-top: 80px;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: Roboto;
+    /*text-align: center;*/
+}
+.signOut{
+    float: right;
+}
+.title_role{
+    font-size: 24px;
+    padding-top: 0;
+}
+
