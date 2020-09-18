@@ -3,7 +3,7 @@ import "./Navbar.module.css";
 import { Layout, Menu } from "antd";
 //import { PageHeader, Button, Descriptions } from 'antd';
 import { ExportOutlined } from "@ant-design/icons";
-
+import firebase from "firebase";
 //import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
 const { Header } = Layout;
 
@@ -22,7 +22,7 @@ export const Navbar: React.FC = () => {
           </a>
         </Menu.Item>
         <Menu.Item key="Checkout" icon={<ExportOutlined />}>
-          <a href="#" target="_blank" rel=""></a>
+          <a onClick={() => firebase.auth().signOut()}></a>
         </Menu.Item>
       </Menu>
     </Header>
