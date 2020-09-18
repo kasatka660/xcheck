@@ -3,10 +3,6 @@ import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import SelectMenu from "../../components/FormElements/Select";
 import styles from "./Login.module.css";
-import { Option } from "rc-select";
-
-
-
 
 if (firebase.apps.length === 0) {
   firebase.initializeApp({
@@ -60,8 +56,6 @@ class Login extends Component {
           )}
         </div>
         </div>
-
-
     );
   }
 }
