@@ -1,0 +1,192 @@
+{
+  "tasks": [
+    {
+      "id": "simple-task-v1",
+      "name": "Simple Task 1",
+      "author": "cardamo",
+      "categoriesOrder": [
+        "Basic Scope",
+        "Extra Scope",
+        "Fines"
+      ],
+      "items": [
+        {
+          "id": "req-1",
+          "minScore": 0,
+          "maxScore": 20,
+          "category": "Basic Scope",
+          "title": "Basic things",
+          "description": "You need to make things right, not wrong"
+        },
+        {
+          "id": "req-2",
+          "minScore": 0,
+          "maxScore": 30,
+          "category": "Extra Scope",
+          "title": "More awesome things",
+          "description": "Be creative and make up some more awesome things"
+        },
+        {
+          "id": "req-3",
+          "minScore": -10,
+          "maxScore": 0,
+          "category": "Fines",
+          "title": "App crashes",
+          "description": "App causes BSoD!"
+        },
+        {
+          "id": "req-4",
+          "minScore": 0,
+          "maxScore": 20,
+          "category": "Basic Scope",
+          "title": "Basic things",
+          "description": "You need to make things right, not wrong"
+        }
+      ]
+    },
+    {
+      "id": "simple-task-v2",
+      "name": "Simple Task 2",
+      "author": "cardamo",
+      "categoriesOrder": [
+        "Basic Scope",
+        "Extra Scope",
+        "Fines"
+      ],
+      "items": [
+        {
+          "id": "req-1",
+          "minScore": 0,
+          "maxScore": 20,
+          "category": "Basic Scope",
+          "title": "Basic things",
+          "description": "You need to make things right, not wrong"
+        },
+        {
+          "id": "req-2",
+          "minScore": 0,
+          "maxScore": 30,
+          "category": "Extra Scope",
+          "title": "More awesome things",
+          "description": "Be creative and make up some more awesome things"
+        },
+        {
+          "id": "req-3",
+          "minScore": -10,
+          "maxScore": 0,
+          "category": "Fines",
+          "title": "App crashes",
+          "description": "App causes BSoD!"
+        },
+        {
+          "id": "req-4",
+          "minScore": 0,
+          "maxScore": 20,
+          "category": "Basic Scope",
+          "title": "Basic things",
+          "description": "You need to make things right, not wrong"
+        },
+        {
+          "id": "req-5",
+          "minScore": 0,
+          "maxScore": 30,
+          "category": "Extra Scope",
+          "title": "More awesome things",
+          "description": "Be creative and make up some more awesome things"
+        },
+        {
+          "id": "req-6",
+          "minScore": -10,
+          "maxScore": 0,
+          "category": "Fines",
+          "title": "App crashes",
+          "description": "App causes BSoD!"
+        }
+      ]
+    }
+  ],
+  "users": [],
+  "review-requests": [
+    {
+      "id": "rev-req-1",
+      "crossCheckSessionId": null,
+      "author": "cardamo",
+      "task": "simple-task-v1",
+      "selfEsteem": "self-esteem-1",
+      "solution": {
+        "pr": "Link to PR",
+        "demo": "Link to demo"
+      }
+    }
+  ],
+  "self-esteems": [
+    {
+      "id": "self-est-1",
+      "student": "ButterBrot777",
+      "task": "simple-task-v1",
+      "gradeItems": [
+        {
+          "requirementId": "1",
+          "estimate": "10",
+          "comment": "Comment text"
+        },
+        {
+          "requirementId": "2",
+          "estimate": "20",
+          "comment": ""
+        }
+      ]
+    },
+    {
+      "id": "DccdqwG"
+    },
+    {
+      "id": "suMPCWZ"
+    },
+    {
+      "student": "kasatka660",
+      "task": "simple-task-v1",
+      "gradeItems": [
+        {
+          "requirementId": "req-1",
+          "estimate": 20,
+          "comment": ""
+        },
+        {
+          "requirementId": "req-2",
+          "estimate": 30,
+          "comment": ""
+        },
+        {
+          "requirementId": "req-3",
+          "estimate": 0,
+          "comment": ""
+        },
+        {
+          "requirementId": "req-4",
+          "estimate": 20,
+          "comment": ""
+        }
+      ],
+      "id": "YBd4wWG"
+    }
+  ],
+  "cross-checks": [
+    {
+      "id": "self-est-1",
+      "student": "ButterBrot777",
+      "reviewer": "somebody12",
+      "task": "simple-task-v1",
+      "gradeItems": [
+        {
+          "requirementId": "1",
+          "estimate": "10"
+        },
+        {
+          "requirementId": "2",
+          "estimate": "20"
+        }
+      ]
+    }
+  ]
+}

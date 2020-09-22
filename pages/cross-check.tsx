@@ -1,24 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import AssessmentForm from "../components/AssessmentForm";
 import SelectMenu from "../components/FormElements/Select";
-import { tasks } from "./../data/data";
 import { Col, Input, Row, Form } from "antd";
 import TaskModel from "../models/Task.model";
 
 const page: React.FC = () => {
+  const [allTasks, setTasksArray] = useState<TaskModel[]>([]);
   const [selectedTask, setTask] = useState<TaskModel>(null);
   const selectOptions = [];
-  tasks.forEach((task) => selectOptions.push({ id: task.id, name: task.id }));
+  useEffect(() => {
+    fetch("http://localhost:3004/tasks")
+      .then((res) => res.json())
+      .then((res) => setTasksArray(res));
+  }, []);
+  allTasks.forEach((task) =>
+    selectOptions.push({ id: task.id, name: task.name })
+  );
 
   const onTaskSelect = (taskId) => {
-    const [task] = tasks.filter((task) => task.id === taskId);
+    const [task] = allTasks.filter((task) => task.id === taskId);
     setTask({ ...task });
   };
 
-  const submitForm = (values) => {
-    console.log(values);
-  };
+  const submitForm = (values) => {};
 
   return (
     <Layout withHeader={true}>
