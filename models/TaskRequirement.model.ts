@@ -1,4 +1,4 @@
-class TaskRequirementModel {
+interface TaskRequirementModel {
   id: string;
   minScore: number;
   maxScore: number;

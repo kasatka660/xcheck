@@ -50,7 +50,7 @@ export const SelectMenu: React.FC<PropsSelect> = ({
       }
     >
       {selectOptions.map((option, key) => (
-        <Option key={key} value={option.name}>
+        <Option key={key} value={option.id}>
           {option.name}
         </Option>
       ))}

@@ -11,13 +11,13 @@ export const Navbar: React.FC = () => {
   return (
     <Header className="header" style={{ width: "100%" }}>
       <Menu
-        defaultSelectedKeys={["SelfAssessment"]}
+        defaultSelectedKeys={[]}
         mode="horizontal"
         style={{ display: "flex", justifyContent: "space-between" }}
       >
-        <Menu.Item key="SelfAssessment">
-          <Link href="/self-assessment">
-            <a>Self-Assessment</a>
+        <Menu.Item key="SelfEsteem">
+          <Link href="/self-esteem">
+            <a>Self-Esteem</a>
           </Link>
         </Menu.Item>
         <Menu.Item key="CrossCheck">

@@ -9,6 +9,7 @@ export const user = {
 export const tasks: TaskModel[] = [
   {
     id: "simple-task-v1",
+    name: "Simple Task 1",
     author: "cardamo",
     state: "DRAFT", // enum [DRAFT, PUBLISHED, ARCHIVED]
     categoriesOrder: ["Basic Scope", "Extra Scope", "Fines"],
@@ -49,6 +50,7 @@ export const tasks: TaskModel[] = [
   },
   {
     id: "simple-task-v2",
+    name: "Simple Task 2",
     author: "cardamo",
     state: "DRAFT", // enum [DRAFT, PUBLISHED, ARCHIVED]
     categoriesOrder: ["Basic Scope", "Extra Scope", "Fines"],
