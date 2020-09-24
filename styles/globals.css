@@ -15,3 +15,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.AlignCenter {
+  text-align: center;
+}

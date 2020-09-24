@@ -2,14 +2,25 @@ import React, { useState } from "react";
 import { Select } from "antd";
 
 type PropsSelect = {
-  menuType: any[];
+  selectOptions: SelectOption[];
+  placeholder: string;
+  onSelect: (val) => void;
 };
 
-export const SelectMenu: React.FC<PropsSelect> = ({ menuType }) => {
+export interface SelectOption {
+  id: string;
+  name: string;
+}
+
+export const SelectMenu: React.FC<PropsSelect> = ({
+  selectOptions,
+  placeholder,
+  onSelect,
+}) => {
   const { Option } = Select;
 
   function onChange(value) {
-    console.log(`selected ${value}`);
+    onSelect(value);
   }
 
   function onBlur() {
@@ -27,8 +38,8 @@ export const SelectMenu: React.FC<PropsSelect> = ({ menuType }) => {
   return (
     <Select
       showSearch
-      style={{ width: 200 }}
-      // placeholder={selectName}
+      style={{ width: 200, margin: "30px 0" }}
+      placeholder={placeholder}
       optionFilterProp="children"
       onChange={onChange}
       onFocus={onFocus}
@@ -38,9 +49,9 @@ export const SelectMenu: React.FC<PropsSelect> = ({ menuType }) => {
         option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
       }
     >
-      {menuType.map((name, key) => (
-        <Option key={key} value={key}>
-          {name}
+      {selectOptions.map((option, key) => (
+        <Option key={key} value={option.id}>
+          {option.name}
         </Option>
       ))}
     </Select>

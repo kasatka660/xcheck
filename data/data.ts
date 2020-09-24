@@ -1,66 +1,111 @@
 import TaskScopes from "./../constants/task-scopes";
+import TaskModel from "../models/Task.model";
 
 export const user = {
   githubId: "torvalds",
   roles: ["author", "student", "supervisor", "course_manager"],
 };
 
-export const task = {
-  id: ["simple-task-v1", "simple-task-v2", "simple-task-v3"],
-  author: "cardamo",
-  state: "DRAFT", // enum [DRAFT, PUBLISHED, ARCHIVED]
-  categoriesOrder: ["Basic Scope", "Extra Scope", "Fines"],
-  items: [
-    {
-      id: "1",
-      minScore: 0,
-      maxScore: 20,
-      category: "Basic Scope",
-      title: "Basic things",
-      description: "You need to make things right, not wrong",
-    },
-    {
-      id: "2",
-      minScore: 0,
-      maxScore: 30,
-      category: "Extra Scope",
-      title: "More awesome things",
-      description: "Be creative and make up some more awesome things",
-    },
-    {
-      id: "3",
-      minScore: -10,
-      maxScore: 0,
-      category: "Fines",
-      title: "App crashes",
-      description: "App causes BSoD!",
-    },
-    {
-      id: "4",
-      minScore: 0,
-      maxScore: 20,
-      category: "Basic Scope",
-      title: "Basic things",
-      description: "You need to make things right, not wrong",
-    },
-    {
-      id: "5",
-      minScore: 0,
-      maxScore: 30,
-      category: "Extra Scope",
-      title: "More awesome things",
-      description: "Be creative and make up some more awesome things",
-    },
-    {
-      id: "6",
-      minScore: -10,
-      maxScore: 0,
-      category: "Fines",
-      title: "App crashes",
-      description: "App causes BSoD!",
-    },
-  ],
-};
+export const tasks: TaskModel[] = [
+  {
+    id: "simple-task-v1",
+    name: "Simple Task 1",
+    author: "cardamo",
+    state: "DRAFT", // enum [DRAFT, PUBLISHED, ARCHIVED]
+    categoriesOrder: ["Basic Scope", "Extra Scope", "Fines"],
+    items: [
+      {
+        id: "1",
+        minScore: 0,
+        maxScore: 20,
+        category: "Basic Scope",
+        title: "Basic things",
+        description: "You need to make things right, not wrong",
+      },
+      {
+        id: "2",
+        minScore: 0,
+        maxScore: 30,
+        category: "Extra Scope",
+        title: "More awesome things",
+        description: "Be creative and make up some more awesome things",
+      },
+      {
+        id: "3",
+        minScore: -10,
+        maxScore: 0,
+        category: "Fines",
+        title: "App crashes",
+        description: "App causes BSoD!",
+      },
+      {
+        id: "4",
+        minScore: 0,
+        maxScore: 20,
+        category: "Basic Scope",
+        title: "Basic things",
+        description: "You need to make things right, not wrong",
+      },
+    ],
+  },
+  {
+    id: "simple-task-v2",
+    name: "Simple Task 2",
+    author: "cardamo",
+    state: "DRAFT", // enum [DRAFT, PUBLISHED, ARCHIVED]
+    categoriesOrder: ["Basic Scope", "Extra Scope", "Fines"],
+    items: [
+      {
+        id: "1",
+        minScore: 0,
+        maxScore: 20,
+        category: "Basic Scope",
+        title: "Basic things",
+        description: "You need to make things right, not wrong",
+      },
+      {
+        id: "2",
+        minScore: 0,
+        maxScore: 30,
+        category: "Extra Scope",
+        title: "More awesome things",
+        description: "Be creative and make up some more awesome things",
+      },
+      {
+        id: "3",
+        minScore: -10,
+        maxScore: 0,
+        category: "Fines",
+        title: "App crashes",
+        description: "App causes BSoD!",
+      },
+      {
+        id: "4",
+        minScore: 0,
+        maxScore: 20,
+        category: "Basic Scope",
+        title: "Basic things",
+        description: "You need to make things right, not wrong",
+      },
+      {
+        id: "5",
+        minScore: 0,
+        maxScore: 30,
+        category: "Extra Scope",
+        title: "More awesome things",
+        description: "Be creative and make up some more awesome things",
+      },
+      {
+        id: "6",
+        minScore: -10,
+        maxScore: 0,
+        category: "Fines",
+        title: "App crashes",
+        description: "App causes BSoD!",
+      },
+    ],
+  },
+];
 
 export const taskScore = {
   task: "simple-task-v1",

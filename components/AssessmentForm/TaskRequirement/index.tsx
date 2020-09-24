@@ -5,35 +5,40 @@ import RequirementImplementationOptions from "../../../constants/requirement-imp
 import styles from "./TaskRequirement.module.css";
 import { TaskRequirementValues } from "../index";
 import FineOptions from "../../../constants/fine-options";
+import PointsBadge from "./../PointsBadge/index";
 
 const TaskRequirement: React.FC<{
   requirement: TaskRequirementModel;
   value: TaskRequirementValues;
   onChange: any;
   setFieldValue: any;
-}> = ({ requirement, value, onChange, setFieldValue }) => {
+  isCrossCheck?: boolean;
+}> = ({ requirement, value, onChange, setFieldValue, isCrossCheck }) => {
   const toggleComment = (value) => {
     setCommentState(!openComment);
   };
   const [openComment, setCommentState] = useState<boolean>(false);
   const isRequirementInFineScope: boolean = requirement.minScore < 0;
+
+  if (!value) {
+    return <></>;
+  }
   return (
-    <Row>
+    <Row className={styles.RequirementRow}>
       <Col span={2}>
-        <div className={styles.maxPointBadge}>
-          <span className={styles.maxPoint}>
-            {isRequirementInFineScope ? "min point" : "max point"}
-          </span>
-          <span className={styles.maxPointValue}>
-            {isRequirementInFineScope
+        <PointsBadge
+          score={
+            isRequirementInFineScope
               ? requirement.minScore
-              : requirement.maxScore}
-          </span>
-        </div>
+              : requirement.maxScore
+          }
+        />
       </Col>
-      <Col span={12}>
+      <Col span={13}>
         <h4>{requirement.title}</h4>
-        <p>{requirement.description}</p>
+        <p className={styles.RequirementDescription}>
+          {requirement.description}
+        </p>
         <a className={styles.CommentBtn} onClick={toggleComment}>
           {openComment ? "Remove comment" : "Add comment"}
         </a>
@@ -49,8 +54,8 @@ const TaskRequirement: React.FC<{
           />
         )}
       </Col>
-      <Col span={6}>
-        <div className={styles.radioButtonsBlock}>
+      <Col span={4}>
+        <div className={styles.RadioButtonsBlock}>
           {!isRequirementInFineScope && (
             <Radio.Group
               onChange={(e) => {
@@ -95,10 +100,21 @@ const TaskRequirement: React.FC<{
           )}
         </div>
       </Col>
-      <Col span={4}>
-        <div className={styles.estimateInput}>
-          <label htmlFor="estimate">Your estimate</label>
+      <Col span={3} style={{ textAlign: "center" }}>
+        {isCrossCheck && (
+          <>
+            <span style={{ fontSize: "10px" }}>Student's estimate</span>
+            <span style={{ display: "block" }}>10</span>
+          </>
+        )}
+      </Col>
+      <Col span={2}>
+        <div className={styles.ScoreEstimate}>
+          <label htmlFor="estimate" style={{ fontSize: "10px" }}>
+            Your estimate
+          </label>
           <InputNumber
+            className={styles.EstimateInput}
             id="estimate"
             min={requirement.minScore}
             max={requirement.maxScore}

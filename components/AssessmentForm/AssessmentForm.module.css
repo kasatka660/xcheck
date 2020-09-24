@@ -1,8 +1,24 @@
 .container {
     max-width: 1000px;
     padding: 30px;
-    margin:  auto;
     background: #F8EFEF;
     border-radius: 10px;
+    margin: 20px auto;
+}
+
+.TotalPoints {
+    margin-top: 20px;
+}
+
+.TotalRow {
+    margin: 30px 0 50px;
+}
+
+.TaskScope {
+    color: #1890ff;
+}
+
+.ButtonsRow {
+    text-align: center;
 }
 
