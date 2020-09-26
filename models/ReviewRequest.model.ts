@@ -1,5 +1,5 @@
 interface ReviewRequestModel {
-  id: string;
+  id?: string;
   author: string;
   selfEsteem: string;
   solution: {

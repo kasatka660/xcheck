@@ -31,7 +31,7 @@ export const Navbar: React.FC = () => {
           </Link>
         </Menu.Item>
         <Menu.Item key="ReviewRequests">
-          <Link href="/">
+          <Link href="/review-request">
             <a>Review Requests</a>
           </Link>
         </Menu.Item>
