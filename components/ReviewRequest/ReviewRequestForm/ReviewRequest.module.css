@@ -1,0 +1,6 @@
+.ErrorMessage {
+    display: block;
+    color: red;
+    text-align: left;
+    line-height: 12px;
+}

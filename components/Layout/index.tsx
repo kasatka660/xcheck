@@ -8,7 +8,7 @@ const Layout: React.FC<{ withHeader: boolean }> = ({
   return (
     <Fragment>
       {withHeader && <Header />}
-      <div>{children}</div>
+      <div style={{ width: "1200px", margin: "50px auto" }}>{children}</div>
     </Fragment>
   );
 };

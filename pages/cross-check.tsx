@@ -27,7 +27,7 @@ const page: React.FC = () => {
 
   return (
     <Layout withHeader={true}>
-      <Row className="AlignCenter">
+      {/*<Row className="AlignCenter">
         <Col span={24}>
           <SelectMenu
             selectOptions={selectOptions}
@@ -35,7 +35,7 @@ const page: React.FC = () => {
             onSelect={(taskId) => onTaskSelect(taskId)}
           />
         </Col>
-      </Row>
+      </Row>*/}
       {selectedTask && (
         <>
           <Row className="AlignCenter">

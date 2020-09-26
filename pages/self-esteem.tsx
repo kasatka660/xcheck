@@ -56,24 +56,10 @@ const page: React.FC = () => {
         </Col>
       </Row>
       {selectedTask && (
-        <>
-          {/*<Row className="AlignCenter">
-            <Col span={24}>
-              <Form.Item>
-                <Input placeholder="Link to your demo" style={{ width: 400 }} />
-              </Form.Item>
-            </Col>
-            <Col span={24}>
-              <Form.Item>
-                <Input placeholder="Link to your PR" style={{ width: 400 }} />
-              </Form.Item>
-            </Col>
-          </Row>*/}
-          <AssessmentForm
-            task={selectedTask}
-            handleSubmit={(values) => submitForm(values)}
-          />
-        </>
+        <AssessmentForm
+          task={selectedTask}
+          handleSubmit={(values) => submitForm(values)}
+        />
       )}
     </Layout>
   );

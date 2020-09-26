@@ -157,6 +157,16 @@
         "pr": "Link to PR",
         "demo": "Link to demo"
       }
+    },
+    {
+      "author": "kasatka660",
+      "task": "simple-task-v2",
+      "selfEsteem": null,
+      "solution": {
+        "pr": "test1",
+        "demo": "test2"
+      },
+      "id": "SXz1LQ2"
     }
   ],
   "self-esteems": [
