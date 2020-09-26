@@ -1,6 +1,7 @@
 {
   "tasks": [
     {
+<<<<<<< HEAD
       "name": "Simple Task 1",
       "author": "lisenokfoxy",
       "categoriesOrder": ["Basic Scope", "Extra Scope", "Fines"],
@@ -9,12 +10,31 @@
           "id": "Simple Task 1",
           "minScore": 0,
           "maxScore": "18",
+=======
+      "id": "simple-task-v1",
+      "name": "Simple Task 1",
+      "author": "cardamo",
+      "categoriesOrder": [
+        "Basic Scope",
+        "Extra Scope",
+        "Fines"
+      ],
+      "items": [
+        {
+          "id": "req-1",
+          "minScore": 0,
+          "maxScore": 20,
+>>>>>>> origin/feature/Login
           "category": "Basic Scope",
           "title": "Basic things",
           "description": "You need to make things right, not wrong"
         },
         {
+<<<<<<< HEAD
           "id": "Simple Task 1",
+=======
+          "id": "req-2",
+>>>>>>> origin/feature/Login
           "minScore": 0,
           "maxScore": 30,
           "category": "Extra Scope",
@@ -22,7 +42,11 @@
           "description": "Be creative and make up some more awesome things"
         },
         {
+<<<<<<< HEAD
           "id": "Simple Task 1",
+=======
+          "id": "req-3",
+>>>>>>> origin/feature/Login
           "minScore": -10,
           "maxScore": 0,
           "category": "Fines",
@@ -30,13 +54,18 @@
           "description": "App causes BSoD!"
         },
         {
+<<<<<<< HEAD
           "id": "Simple Task 1",
+=======
+          "id": "req-4",
+>>>>>>> origin/feature/Login
           "minScore": 0,
           "maxScore": 20,
           "category": "Basic Scope",
           "title": "Basic things",
           "description": "You need to make things right, not wrong"
         }
+<<<<<<< HEAD
       ],
       "id": "simple-task-v1"
     },
@@ -49,12 +78,34 @@
           "id": "Simple Task 2",
           "minScore": 0,
           "maxScore": "35",
+=======
+      ]
+    },
+    {
+      "id": "simple-task-v2",
+      "name": "Simple Task 2",
+      "author": "cardamo",
+      "categoriesOrder": [
+        "Basic Scope",
+        "Extra Scope",
+        "Fines"
+      ],
+      "items": [
+        {
+          "id": "req-1",
+          "minScore": 0,
+          "maxScore": 20,
+>>>>>>> origin/feature/Login
           "category": "Basic Scope",
           "title": "Basic things",
           "description": "You need to make things right, not wrong"
         },
         {
+<<<<<<< HEAD
           "id": "Simple Task 2",
+=======
+          "id": "req-2",
+>>>>>>> origin/feature/Login
           "minScore": 0,
           "maxScore": 30,
           "category": "Extra Scope",
@@ -62,7 +113,11 @@
           "description": "Be creative and make up some more awesome things"
         },
         {
+<<<<<<< HEAD
           "id": "Simple Task 2",
+=======
+          "id": "req-3",
+>>>>>>> origin/feature/Login
           "minScore": -10,
           "maxScore": 0,
           "category": "Fines",
@@ -70,7 +125,11 @@
           "description": "App causes BSoD!"
         },
         {
+<<<<<<< HEAD
           "id": "Simple Task 2",
+=======
+          "id": "req-4",
+>>>>>>> origin/feature/Login
           "minScore": 0,
           "maxScore": 20,
           "category": "Basic Scope",
@@ -78,7 +137,11 @@
           "description": "You need to make things right, not wrong"
         },
         {
+<<<<<<< HEAD
           "id": "Simple Task 2",
+=======
+          "id": "req-5",
+>>>>>>> origin/feature/Login
           "minScore": 0,
           "maxScore": 30,
           "category": "Extra Scope",
@@ -86,13 +149,18 @@
           "description": "Be creative and make up some more awesome things"
         },
         {
+<<<<<<< HEAD
           "id": "Simple Task 2",
+=======
+          "id": "req-6",
+>>>>>>> origin/feature/Login
           "minScore": -10,
           "maxScore": 0,
           "category": "Fines",
           "title": "App crashes",
           "description": "App causes BSoD!"
         }
+<<<<<<< HEAD
       ],
       "id": "simple-task-v2"
     },
@@ -143,6 +211,9 @@
         }
       ],
       "id": "eCjFX9b"
+=======
+      ]
+>>>>>>> origin/feature/Login
     }
   ],
   "users": [],
@@ -157,6 +228,7 @@
         "pr": "Link to PR",
         "demo": "Link to demo"
       }
+<<<<<<< HEAD
     },
     {
       "author": "kasatka660",
@@ -167,6 +239,8 @@
         "demo": "test2"
       },
       "id": "SXz1LQ2"
+=======
+>>>>>>> origin/feature/Login
     }
   ],
   "self-esteems": [
@@ -219,6 +293,7 @@
         }
       ],
       "id": "YBd4wWG"
+<<<<<<< HEAD
     },
     {
       "student": "kasatka660",
@@ -273,6 +348,8 @@
         }
       ],
       "id": "VziOisR"
+=======
+>>>>>>> origin/feature/Login
     }
   ],
   "cross-checks": [

@@ -9,13 +9,16 @@
     "start-server": "json-server --watch data/db.json --port 3004"
   },
   "dependencies": {
+    "@types/react-dom": "^16.9.8",
     "antd": "^4.6.2",
+    "firebase": "^7.21.0",
     "formik": "^2.1.5",
     "json-server": "^0.16.1",
     "next": "9.5.3",
     "next-redux-wrapper": "^6.0.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-firebaseui": "^4.1.0",
     "react-redux": "^7.2.1",
     "redux": "^4.0.5"
   },
