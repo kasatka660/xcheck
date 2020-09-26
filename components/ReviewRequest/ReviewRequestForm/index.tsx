@@ -51,6 +51,7 @@ const ReviewRequestForm: React.FC = () => {
           onSubmit={(values, { setSubmitting }) => {
             const reviewRequestItem: ReviewRequestModel = {
               author: "kasatka660",
+              task: selectedTask.id,
               selfEsteem: null,
               solution: {
                 pr: values.linkToPR,

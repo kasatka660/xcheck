@@ -13,9 +13,11 @@ const ReviewRequestPage: React.FC = () => {
 
   return (
     <Layout withHeader={true}>
-      <Button className="secondary" onClick={addReviewRequestForm}>
-        Add Review Request
-      </Button>
+      {!reviewRequestFormAdded && (
+        <Button className="secondary" onClick={addReviewRequestForm}>
+          Add Review Request
+        </Button>
+      )}
       {reviewRequestFormAdded && <ReviewRequestForm />}
       {!reviewRequestFormAdded && <ReviewRequestList />}
     </Layout>
