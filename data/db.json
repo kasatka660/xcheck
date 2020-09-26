@@ -1,25 +1,20 @@
 {
   "tasks": [
     {
-      "id": "simple-task-v1",
       "name": "Simple Task 1",
-      "author": "cardamo",
-      "categoriesOrder": [
-        "Basic Scope",
-        "Extra Scope",
-        "Fines"
-      ],
+      "author": "lisenokfoxy",
+      "categoriesOrder": ["Basic Scope", "Extra Scope", "Fines"],
       "items": [
         {
-          "id": "req-1",
+          "id": "Simple Task 1",
           "minScore": 0,
-          "maxScore": 20,
+          "maxScore": "18",
           "category": "Basic Scope",
           "title": "Basic things",
           "description": "You need to make things right, not wrong"
         },
         {
-          "id": "req-2",
+          "id": "Simple Task 1",
           "minScore": 0,
           "maxScore": 30,
           "category": "Extra Scope",
@@ -27,7 +22,7 @@
           "description": "Be creative and make up some more awesome things"
         },
         {
-          "id": "req-3",
+          "id": "Simple Task 1",
           "minScore": -10,
           "maxScore": 0,
           "category": "Fines",
@@ -35,35 +30,31 @@
           "description": "App causes BSoD!"
         },
         {
-          "id": "req-4",
+          "id": "Simple Task 1",
           "minScore": 0,
           "maxScore": 20,
           "category": "Basic Scope",
           "title": "Basic things",
           "description": "You need to make things right, not wrong"
         }
-      ]
+      ],
+      "id": "simple-task-v1"
     },
     {
-      "id": "simple-task-v2",
       "name": "Simple Task 2",
-      "author": "cardamo",
-      "categoriesOrder": [
-        "Basic Scope",
-        "Extra Scope",
-        "Fines"
-      ],
+      "author": "lisenokfoxy",
+      "categoriesOrder": ["Basic Scope", "Extra Scope", "Fines"],
       "items": [
         {
-          "id": "req-1",
+          "id": "Simple Task 2",
           "minScore": 0,
-          "maxScore": 20,
+          "maxScore": "35",
           "category": "Basic Scope",
           "title": "Basic things",
           "description": "You need to make things right, not wrong"
         },
         {
-          "id": "req-2",
+          "id": "Simple Task 2",
           "minScore": 0,
           "maxScore": 30,
           "category": "Extra Scope",
@@ -71,7 +62,7 @@
           "description": "Be creative and make up some more awesome things"
         },
         {
-          "id": "req-3",
+          "id": "Simple Task 2",
           "minScore": -10,
           "maxScore": 0,
           "category": "Fines",
@@ -79,7 +70,7 @@
           "description": "App causes BSoD!"
         },
         {
-          "id": "req-4",
+          "id": "Simple Task 2",
           "minScore": 0,
           "maxScore": 20,
           "category": "Basic Scope",
@@ -87,7 +78,7 @@
           "description": "You need to make things right, not wrong"
         },
         {
-          "id": "req-5",
+          "id": "Simple Task 2",
           "minScore": 0,
           "maxScore": 30,
           "category": "Extra Scope",
@@ -95,14 +86,63 @@
           "description": "Be creative and make up some more awesome things"
         },
         {
-          "id": "req-6",
+          "id": "Simple Task 2",
           "minScore": -10,
           "maxScore": 0,
           "category": "Fines",
           "title": "App crashes",
           "description": "App causes BSoD!"
         }
-      ]
+      ],
+      "id": "simple-task-v2"
+    },
+    {
+      "name": "test",
+      "author": "lisenokfoxy",
+      "categoriesOrder": ["Basic Scope", "Extra Scope", "Fines"],
+      "items": [
+        {
+          "name": "test",
+          "minScore": "0",
+          "maxScore": "57",
+          "category": "Basic Scope",
+          "title": "test",
+          "description": "ttesttest"
+        }
+      ],
+      "id": "ZE3XSRC"
+    },
+    {
+      "name": "Simple-task-3",
+      "author": "lisenokfoxy",
+      "categoriesOrder": ["Basic Scope", "Extra Scope", "Fines"],
+      "items": [
+        {
+          "name": "Simple-task-3",
+          "minScore": "0",
+          "maxScore": "30",
+          "category": "Basic Scope",
+          "title": "test",
+          "description": "test description"
+        }
+      ],
+      "id": "tt4NaGt"
+    },
+    {
+      "name": "Simple-task-4",
+      "author": "lisenokfoxy",
+      "categoriesOrder": ["Basic Scope", "Extra Scope", "Fines"],
+      "items": [
+        {
+          "id": "Simple-task-4",
+          "minScore": "0",
+          "maxScore": "15",
+          "category": "Basic Scope",
+          "title": "test",
+          "description": "test description"
+        }
+      ],
+      "id": "eCjFX9b"
     }
   ],
   "users": [],
@@ -169,6 +209,60 @@
         }
       ],
       "id": "YBd4wWG"
+    },
+    {
+      "student": "kasatka660",
+      "task": "simple-task-v1",
+      "gradeItems": [
+        {
+          "requirementId": "req-1",
+          "estimate": 20,
+          "comment": ""
+        },
+        {
+          "requirementId": "req-2",
+          "estimate": 30,
+          "comment": ""
+        },
+        {
+          "requirementId": "req-3",
+          "estimate": 0,
+          "comment": ""
+        },
+        {
+          "requirementId": "req-4",
+          "estimate": 20,
+          "comment": ""
+        }
+      ],
+      "id": "4b9oJWp"
+    },
+    {
+      "student": "kasatka660",
+      "task": "simple-task-v1",
+      "gradeItems": [
+        {
+          "requirementId": "req-1",
+          "estimate": 10,
+          "comment": ""
+        },
+        {
+          "requirementId": "req-2",
+          "estimate": 30,
+          "comment": ""
+        },
+        {
+          "requirementId": "req-3",
+          "estimate": 0,
+          "comment": ""
+        },
+        {
+          "requirementId": "req-4",
+          "estimate": 20,
+          "comment": ""
+        }
+      ],
+      "id": "VziOisR"
     }
   ],
   "cross-checks": [

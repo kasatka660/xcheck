@@ -35,6 +35,11 @@ export const Navbar: React.FC = () => {
             <a>Review Requests</a>
           </Link>
         </Menu.Item>
+        <Menu.Item key="TaskForm">
+          <Link href="/task-form">
+            <a>Task Form</a>
+          </Link>
+        </Menu.Item>
         <Menu.Item key="SingOut" icon={<ExportOutlined />}>
           <Link href="/">
             <a href="#" />
