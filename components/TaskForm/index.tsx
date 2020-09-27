@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import styles from "./TaskForm.module.css";
 import React, { useState } from "react";
 import { Divider, Col, InputNumber, Button, Row } from "antd";
@@ -414,4 +412,3 @@ export const TaskForm: React.FC = () => {
 };
 
 export default TaskForm;
->>>>>>> origin/feature/Login

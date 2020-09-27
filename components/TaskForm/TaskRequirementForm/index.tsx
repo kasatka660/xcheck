@@ -1,16 +1,11 @@
 import React, { useState } from "react";
-import TaskRequirementModel from "./../../../models/TaskRequirement.model";
-import { Divider, Col, InputNumber, Radio, Row } from "antd";
-import styles from "../TaskFor";
-import { Input, Table, Tag, Space, Button, Form } from "antd";
+import { Divider, Col, Row } from "antd";
+import { Button, Form } from "antd";
 import SelectMenu from "../../FormElements/Select/index";
 import { tasks } from "../../../data/data";
 import Layout from "../../Layout";
 import TaskModel from "../../../models/Task.model";
-import AssessmentForm from "../../AssessmentForm";
 import { Formik, Field, ErrorMessage, FieldArray } from "formik";
-import { withFormik } from "formik";
-import RequirementImplementationOptions from "../../../constants/requirement-implementation-options";
 
 type PropsTask = {
   taskAction: string;
@@ -44,8 +39,8 @@ export const TaskRequirementForm: React.FC = () => {
           scopeItems: [
             {
               id: item.id,
-              minScore: item.minScore,
-              maxScore: item.maxScore,
+              minScore: item.minScore.toString(),
+              maxScore: item.maxScore.toString(),
               category: item.category,
               title: item.title,
               description: item.description,
