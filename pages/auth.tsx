@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 const page: React.FC = () => {
   const router = useRouter();
   if (typeof window !== "undefined") {
-    if (window.localStorage.getItem("user")) {
+    if (!window.localStorage.getItem("user")) {
       return (
         <Layout withHeader={false}>
           <Authorization />
@@ -15,9 +15,8 @@ const page: React.FC = () => {
     } else {
       router.push("/").then();
     }
-  } else {
-    return <></>;
   }
+  return <></>;
 };
 
 export default page;
