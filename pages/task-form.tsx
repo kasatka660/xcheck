@@ -466,6 +466,7 @@ const page: React.FC = () => {
             visible={visible}
             title="Create new task"
             onCancel={this.handleCancel}
+            width={1000}
             footer={[
               <Button key="back" onClick={this.handleCancel}>
                 Cancel
