@@ -38,7 +38,7 @@ const AssessmentForm: React.FC<{
   });
   const countTotal = (items: Object, param: string): number => {
     return Object.values(items).reduce((prev: any, cur: any) => {
-      return prev + cur[param];
+      return parseInt(prev) + cur[param];
     }, 0);
   };
 

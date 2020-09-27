@@ -8,12 +8,16 @@ import ReviewRequestModel from "../../../models/ReviewRequest.model";
 import AssessmentForm from "../../AssessmentForm";
 import SelfEsteemModel from "../../../models/SelfEsteem.model";
 import { serverBaseUrl } from "../../../constants/config";
+import { router } from "next/client";
 
 const { Step } = Steps;
 
-const ReviewRequestForm: React.FC = () => {
+const ReviewRequestForm: React.FC<{ submitCallback: () => void }> = ({
+  submitCallback,
+}) => {
   const [allTasks, setTasksArray] = useState<TaskModel[]>([]);
   const [selectedTask, setTask] = useState<TaskModel>(null);
+  const [submittedSelfEsteem, setSubmittedSelfEsteem] = useState<string>("");
 
   const taskSelectOptions = [];
   useEffect(() => {
@@ -21,6 +25,27 @@ const ReviewRequestForm: React.FC = () => {
       .then((res) => res.json())
       .then((res) => setTasksArray(res));
   }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (selectedTask) {
+        const user = localStorage.getItem("user");
+        fetch(
+          serverBaseUrl +
+            `/self-esteems?task=${selectedTask.id}&student=${user}`
+        )
+          .then((res) => res.json())
+          .then((selfEsteem) => {
+            if (selfEsteem.length) {
+              const firstItem = selfEsteem.pop();
+              setSubmittedSelfEsteem(firstItem.id);
+            } else {
+              setSubmittedSelfEsteem("");
+            }
+          });
+      }
+    }
+  }, [selectedTask]);
 
   allTasks.forEach((task) =>
     taskSelectOptions.push({ id: task.id, name: task.name })
@@ -45,7 +70,7 @@ const ReviewRequestForm: React.FC = () => {
   const submitForm = (values) => {
     const gradeItems = Object.keys(values.items).map((key) => ({
       requirementId: key,
-      estimate: values.items[key].estimate,
+      estimate: values.items[key].estimate.toString(),
       comment: values.items[key].comment,
     }));
     const selfEsteemItem: SelfEsteemModel = {
@@ -58,7 +83,9 @@ const ReviewRequestForm: React.FC = () => {
       method: "POST",
       body: JSON.stringify(selfEsteemItem),
       headers: { "Content-Type": "application/json" },
-    }).then((res) => alert("Form submitted"));
+    })
+      .then((res) => res.json())
+      .then((result) => setSubmittedSelfEsteem(result.id));
   };
 
   class AssessmentModalForm extends React.Component {
@@ -81,13 +108,18 @@ const ReviewRequestForm: React.FC = () => {
           <Steps progressDot direction="vertical">
             <Step title="Step 1"></Step>
           </Steps>
-          <Button
-            className="NewTaskButton"
-            type="primary"
-            onClick={this.showModal}
-          >
-            Click to assess yourself
-          </Button>
+          {submittedSelfEsteem.length === 0 && (
+            <Button
+              className="NewTaskButton"
+              type="primary"
+              onClick={this.showModal}
+            >
+              Click to assess yourself
+            </Button>
+          )}
+          {submittedSelfEsteem.length > 0 && (
+            <span>Your estimate was saved.</span>
+          )}
           <Steps progressDot direction="vertical">
             <Step title="Step 2"></Step>
           </Steps>
@@ -128,7 +160,7 @@ const ReviewRequestForm: React.FC = () => {
               const reviewRequestItem: ReviewRequestModel = {
                 author: "kasatka660",
                 task: selectedTask.id,
-                selfEsteem: null,
+                selfEsteem: submittedSelfEsteem,
                 solution: {
                   pr: values.linkToPR,
                   demo: values.linkToDemo,
@@ -138,7 +170,7 @@ const ReviewRequestForm: React.FC = () => {
                 method: "POST",
                 body: JSON.stringify(reviewRequestItem),
                 headers: { "Content-Type": "application/json" },
-              }).then((res) => alert("Form submitted"));
+              }).then((res) => submitCallback());
             }}
           >
             {({

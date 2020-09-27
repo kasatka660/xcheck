@@ -10,7 +10,7 @@
       ],
       "items": [
         {
-          "id": "Simple Task 1",
+          "id": "Simple Task 1_1",
           "minScore": 0,
           "maxScore": "18",
           "category": "Basic Scope",
@@ -18,7 +18,7 @@
           "description": "You need to make things right, not wrong"
         },
         {
-          "id": "Simple Task 1",
+          "id": "Simple Task 1_2",
           "minScore": 0,
           "maxScore": 30,
           "category": "Extra Scope",
@@ -26,7 +26,7 @@
           "description": "Be creative and make up some more awesome things"
         },
         {
-          "id": "Simple Task 1",
+          "id": "Simple Task 1_3",
           "minScore": -10,
           "maxScore": 0,
           "category": "Fines",
@@ -34,7 +34,7 @@
           "description": "App causes BSoD!"
         },
         {
-          "id": "Simple Task 1",
+          "id": "Simple Task 1_4",
           "minScore": 0,
           "maxScore": 20,
           "category": "Basic Scope",
@@ -54,7 +54,7 @@
       ],
       "items": [
         {
-          "id": "Simple Task 2",
+          "id": "Simple Task 2_1",
           "minScore": 0,
           "maxScore": "35",
           "category": "Basic Scope",
@@ -62,7 +62,7 @@
           "description": "You need to make things right, not wrong"
         },
         {
-          "id": "Simple Task 2",
+          "id": "Simple Task 2_2",
           "minScore": 0,
           "maxScore": 30,
           "category": "Extra Scope",
@@ -70,7 +70,7 @@
           "description": "Be creative and make up some more awesome things"
         },
         {
-          "id": "Simple Task 2",
+          "id": "Simple Task 2_3",
           "minScore": -10,
           "maxScore": 0,
           "category": "Fines",
@@ -78,7 +78,7 @@
           "description": "App causes BSoD!"
         },
         {
-          "id": "Simple Task 2",
+          "id": "Simple Task 2_4",
           "minScore": 0,
           "maxScore": 20,
           "category": "Basic Scope",
@@ -86,7 +86,7 @@
           "description": "You need to make things right, not wrong"
         },
         {
-          "id": "Simple Task 2",
+          "id": "Simple Task 2_5",
           "minScore": 0,
           "maxScore": 30,
           "category": "Extra Scope",
@@ -94,7 +94,7 @@
           "description": "Be creative and make up some more awesome things"
         },
         {
-          "id": "Simple Task 2",
+          "id": "Simple Task 2_6",
           "minScore": -10,
           "maxScore": 0,
           "category": "Fines",
@@ -187,6 +187,56 @@
         "demo": "test2"
       },
       "id": "SXz1LQ2"
+    },
+    {
+      "author": "kasatka660",
+      "task": "eCjFX9b",
+      "selfEsteem": null,
+      "solution": {
+        "pr": "test",
+        "demo": "test"
+      },
+      "id": "CM0kJj0"
+    },
+    {
+      "author": "kasatka660",
+      "task": "simple-task-v2",
+      "selfEsteem": null,
+      "solution": {
+        "pr": "test222",
+        "demo": "test333"
+      },
+      "id": "nFhdja9"
+    },
+    {
+      "author": "kasatka660",
+      "task": "simple-task-v2",
+      "selfEsteem": "Y6bgEEL",
+      "solution": {
+        "pr": "test",
+        "demo": "set"
+      },
+      "id": "iY5W4de"
+    },
+    {
+      "author": "kasatka660",
+      "task": "simple-task-v2",
+      "selfEsteem": "Y6bgEEL",
+      "solution": {
+        "pr": "test",
+        "demo": "asfasdf"
+      },
+      "id": "oxIDJPp"
+    },
+    {
+      "author": "kasatka660",
+      "task": "eCjFX9b",
+      "selfEsteem": "8SJoBds",
+      "solution": {
+        "pr": "test",
+        "demo": "atsdaf"
+      },
+      "id": "XfgejO6"
     }
   ],
   "self-esteems": [
@@ -293,6 +343,79 @@
         }
       ],
       "id": "VziOisR"
+    },
+    {
+      "student": "kasatka660",
+      "task": "tt4NaGt",
+      "gradeItems": [
+        {
+          "requirementId": "undefined",
+          "estimate": 15,
+          "comment": ""
+        }
+      ],
+      "id": "yf4sojn"
+    },
+    {
+      "student": "kasatka660",
+      "task": "simple-task-v2",
+      "gradeItems": [
+        {
+          "requirementId": "Simple Task 2_1",
+          "estimate": "35",
+          "comment": ""
+        },
+        {
+          "requirementId": "Simple Task 2_2",
+          "estimate": 30,
+          "comment": ""
+        },
+        {
+          "requirementId": "Simple Task 2_3",
+          "estimate": 0,
+          "comment": ""
+        },
+        {
+          "requirementId": "Simple Task 2_4",
+          "estimate": 20,
+          "comment": ""
+        },
+        {
+          "requirementId": "Simple Task 2_5",
+          "estimate": 30,
+          "comment": ""
+        },
+        {
+          "requirementId": "Simple Task 2_6",
+          "estimate": 0,
+          "comment": ""
+        }
+      ],
+      "id": "Y6bgEEL"
+    },
+    {
+      "student": "kasatka660",
+      "task": "tt4NaGt",
+      "gradeItems": [
+        {
+          "requirementId": "undefined",
+          "estimate": "30",
+          "comment": ""
+        }
+      ],
+      "id": "OengJ8f"
+    },
+    {
+      "student": "kasatka660",
+      "task": "eCjFX9b",
+      "gradeItems": [
+        {
+          "requirementId": "Simple-task-4",
+          "estimate": "15",
+          "comment": ""
+        }
+      ],
+      "id": "8SJoBds"
     }
   ],
   "cross-checks": [
@@ -311,6 +434,16 @@
           "estimate": "20"
         }
       ]
+    },
+    {
+      "id": "NX9zOZT"
+    },
+    {
+      "reviewer": "kasatka660",
+      "gradeItems": [],
+      "task": "simple-task-v2",
+      "student": "kasatka660",
+      "id": "Tfek7Zi"
     }
   ]
 }

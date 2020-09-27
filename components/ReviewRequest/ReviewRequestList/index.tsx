@@ -35,7 +35,7 @@ const ReviewRequestList: React.FC = () => {
       key: "",
       render: (item) => {
         return (
-          <Link href={`/cross-check?id=${item.id}`}>
+          <Link href={`/cross-check/${item.id}`}>
             <a>Go To Cross Check</a>
           </Link>
         );

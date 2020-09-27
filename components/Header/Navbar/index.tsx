@@ -29,7 +29,7 @@ export const Navbar: React.FC = () => {
       >
         {isStudent && (
           <Menu.Item key="Reviews">
-            <Link href="/">
+            <Link href="/reviews">
               <a>Reviews</a>
             </Link>
           </Menu.Item>

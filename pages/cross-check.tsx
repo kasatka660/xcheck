@@ -5,15 +5,25 @@ import SelectMenu from "../components/FormElements/Select";
 import { Col, Input, Row, Form } from "antd";
 import TaskModel from "../models/Task.model";
 import { serverBaseUrl } from "../constants/config";
+import { useRouter } from "next/router";
+import CrossCheckModel from "../models/CrossCheck.model";
 
 const page: React.FC = () => {
   const [allTasks, setTasksArray] = useState<TaskModel[]>([]);
   const [selectedTask, setTask] = useState<TaskModel>(null);
+  const router = useRouter();
+
   const selectOptions = [];
   useEffect(() => {
-    fetch(serverBaseUrl + "/tasks")
-      .then((res) => res.json())
-      .then((res) => setTasksArray(res));
+    if (router.query.id) {
+      fetch(serverBaseUrl + "/review-request/" + router.query.id)
+        .then((res) => res.json())
+        .then((res) => console.log(res));
+
+      fetch(serverBaseUrl + "/tasks")
+        .then((res) => res.json())
+        .then((res) => setTasksArray(res));
+    }
   }, []);
   allTasks.forEach((task) =>
     selectOptions.push({ id: task.id, name: task.name })

@@ -10,6 +10,9 @@ const ReviewRequestPage: React.FC = () => {
   );
 
   const addReviewRequestForm = () => setReviewRequestForm(true);
+  const reviewRequestCallback = () => {
+    setReviewRequestForm(false);
+  };
 
   return (
     <Layout withHeader={true}>
@@ -18,8 +21,18 @@ const ReviewRequestPage: React.FC = () => {
           Add Review Request
         </Button>
       )}
-      {reviewRequestFormAdded && <ReviewRequestForm />}
-      {!reviewRequestFormAdded && <ReviewRequestList />}
+      {reviewRequestFormAdded && (
+        <>
+          <h1>Add review request</h1>
+          <ReviewRequestForm submitCallback={reviewRequestCallback} />
+        </>
+      )}
+      {!reviewRequestFormAdded && (
+        <>
+          <h1>Review requests</h1>
+          <ReviewRequestList />
+        </>
+      )}
     </Layout>
   );
 };
