@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "start-server": "json-server --watch data/db.json --port 3004"
+    "start-next": "next start",
+    "start": "node server/server.js"
   },
   "dependencies": {
     "@types/react-dom": "^16.9.8",
