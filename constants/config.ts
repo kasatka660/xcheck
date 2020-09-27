@@ -1,2 +1,2 @@
 export const serverBaseUrl =
-  process.env.JSON_SERVER_URL || "http://localhost:3004";
+  process.env.NEXT_PUBLIC_JSON_SERVER_URL || "http://localhost:3004";
