@@ -7,13 +7,6 @@ import * as firebaseui from "firebaseui";
 import { useRouter } from "next/router";
 import { user } from "../../data/data";
 
-if (firebase.apps.length === 0) {
-  firebase.initializeApp({
-    apiKey: "AIzaSyCr0kyqr-_V786T9uAIabmGLRn1YgexG14",
-    authDomain: "xcheck-a2bee.firebaseapp.com",
-  });
-}
-
 const Authorization: React.FC = () => {
   const [isSigning, setSigning] = useState<boolean>(false);
   const [userRole, setUserRole] = useState<string>(null);
