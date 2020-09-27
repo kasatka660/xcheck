@@ -4,10 +4,13 @@ import { Layout, Menu } from "antd";
 import { ExportOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import { Userinfo } from "../UserInfo";
+import { useRouter } from "next/router";
+import firebase from "firebase";
 
 const { Header } = Layout;
 
 export const Navbar: React.FC = () => {
+  const router = useRouter();
   return (
     <Header className="header" style={{ width: "100%" }}>
       <Menu
@@ -42,7 +45,17 @@ export const Navbar: React.FC = () => {
         </Menu.Item>
         <Menu.Item key="SingOut" icon={<ExportOutlined />}>
           <Link href="/">
-            <a href="#" />
+            <a
+              href="#"
+              onClick={() => {
+                window.localStorage.removeItem("user");
+                window.localStorage.removeItem("userRole");
+                firebase
+                  .auth()
+                  .signOut()
+                  .then(() => router.push("/auth"));
+              }}
+            />
           </Link>
         </Menu.Item>
         <Userinfo />
