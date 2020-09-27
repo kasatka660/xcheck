@@ -4,13 +4,14 @@ import AssessmentForm from "../components/AssessmentForm";
 import SelectMenu from "../components/FormElements/Select";
 import { Col, Input, Row, Form } from "antd";
 import TaskModel from "../models/Task.model";
+import { serverBaseUrl } from "../constants/config";
 
 const page: React.FC = () => {
   const [allTasks, setTasksArray] = useState<TaskModel[]>([]);
   const [selectedTask, setTask] = useState<TaskModel>(null);
   const selectOptions = [];
   useEffect(() => {
-    fetch("http://localhost:3004/tasks")
+    fetch(serverBaseUrl + "/tasks")
       .then((res) => res.json())
       .then((res) => setTasksArray(res));
   }, []);

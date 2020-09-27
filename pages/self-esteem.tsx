@@ -5,13 +5,14 @@ import SelectMenu from "../components/FormElements/Select";
 import { Col, Input, Row, Form } from "antd";
 import TaskModel from "../models/Task.model";
 import SelfEsteemModel from "../models/SelfEsteem.model";
+import { serverBaseUrl } from "../constants/config";
 
 const page: React.FC = () => {
   const [allTasks, setTasksArray] = useState<TaskModel[]>([]);
   const [selectedTask, setTask] = useState<TaskModel>(null);
   const selectOptions = [];
   useEffect(() => {
-    fetch("http://localhost:3004/tasks")
+    fetch(serverBaseUrl + "/tasks")
       .then((res) => res.json())
       .then((res) => setTasksArray(res));
   }, []);
@@ -37,7 +38,7 @@ const page: React.FC = () => {
       task: selectedTask.id,
       gradeItems: gradeItems,
     };
-    fetch("http://localhost:3004/self-esteems/", {
+    fetch(serverBaseUrl + "/self-esteems/", {
       method: "POST",
       body: JSON.stringify(selfEsteemItem),
       headers: { "Content-Type": "application/json" },

@@ -5,6 +5,7 @@ import SelectMenu from "../components/FormElements/Select";
 import Layout from "../components/Layout";
 import TaskModel from "../models/Task.model";
 import { Formik, Field, ErrorMessage, FieldArray, Form } from "formik";
+import { serverBaseUrl } from "../constants/config";
 
 const page: React.FC = () => {
   let initialValues = {
@@ -25,7 +26,7 @@ const page: React.FC = () => {
   const selectOptions = [];
 
   useEffect(() => {
-    fetch("http://localhost:3004/tasks")
+    fetch(serverBaseUrl + "/tasks")
       .then((res) => res.json())
       .then((res) => setTasksArray(res));
   }, []);
@@ -74,7 +75,7 @@ const page: React.FC = () => {
     };
     //alert(JSON.stringify(taskFormItem));
     if (selectedTask) {
-      fetch(`http://localhost:3004/tasks/${selectedTask.id}`, {
+      fetch(`${serverBaseUrl}/tasks/${selectedTask.id}`, {
         method: "PUT",
         body: JSON.stringify(taskFormItem),
         headers: { "Content-Type": "application/json" },
@@ -266,7 +267,7 @@ const page: React.FC = () => {
 
     //alert(JSON.stringify(taskFormItem, null, 2));
 
-    fetch("http://localhost:3004/tasks/", {
+    fetch(serverBaseUrl + "/tasks/", {
       method: "POST",
       body: JSON.stringify(taskFormItem),
       headers: { "Content-Type": "application/json" },

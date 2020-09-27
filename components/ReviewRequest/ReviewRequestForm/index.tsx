@@ -7,6 +7,7 @@ import TaskModel from "../../../models/Task.model";
 import ReviewRequestModel from "../../../models/ReviewRequest.model";
 import AssessmentForm from "../../AssessmentForm";
 import SelfEsteemModel from "../../../models/SelfEsteem.model";
+import { serverBaseUrl } from "../../../constants/config";
 
 const { Step } = Steps;
 
@@ -16,7 +17,7 @@ const ReviewRequestForm: React.FC = () => {
 
   const taskSelectOptions = [];
   useEffect(() => {
-    fetch("http://localhost:3004/tasks")
+    fetch(serverBaseUrl + "/tasks")
       .then((res) => res.json())
       .then((res) => setTasksArray(res));
   }, []);
@@ -31,7 +32,7 @@ const ReviewRequestForm: React.FC = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3004/tasks")
+    fetch(serverBaseUrl + "/tasks")
       .then((res) => res.json())
       .then((res) => setTasksArray(res));
   }, []);
@@ -53,7 +54,7 @@ const ReviewRequestForm: React.FC = () => {
       task: selectedTask.id,
       gradeItems: gradeItems,
     };
-    fetch("http://localhost:3004/self-esteems/", {
+    fetch(serverBaseUrl + "/self-esteems/", {
       method: "POST",
       body: JSON.stringify(selfEsteemItem),
       headers: { "Content-Type": "application/json" },
@@ -133,7 +134,7 @@ const ReviewRequestForm: React.FC = () => {
                   demo: values.linkToDemo,
                 },
               };
-              fetch("http://localhost:3004/review-requests/", {
+              fetch(serverBaseUrl + "/review-requests/", {
                 method: "POST",
                 body: JSON.stringify(reviewRequestItem),
                 headers: { "Content-Type": "application/json" },

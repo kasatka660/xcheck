@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import ReviewRequestModel from "../../../models/ReviewRequest.model";
 import { Table, Tag, Space, Menu } from "antd";
 import Link from "next/link";
+import { serverBaseUrl } from "../../../constants/config";
 
 const ReviewRequestList: React.FC = () => {
   const [allRequests, setRequestsArray] = useState<ReviewRequestModel[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:3004/review-requests")
+    fetch(serverBaseUrl + "/review-requests")
       .then((res) => res.json())
       .then((res) => setRequestsArray(res));
   }, []);
