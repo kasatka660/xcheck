@@ -28,7 +28,7 @@ const Authorization: React.FC = () => {
 
   return (
     <div className={styles.Wrapper}>
-      <h2 className={styles.Title}>Sing in to XCheck</h2>
+      <h2 className={styles.Title}>Sign in to XCheck</h2>
       {!isSigning && (
         <SelectMenu
           selectOptions={[
