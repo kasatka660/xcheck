@@ -5,6 +5,8 @@ or
 ### yarn dev
 To view applicaton in the browser open http://localhost:3000
 
+Additionally, you need to run json-server : yarn start
+
 ### Technologies in the project :
 - React
 - Typescript
