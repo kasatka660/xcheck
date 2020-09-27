@@ -12,7 +12,10 @@ To view applicaton in the browser open http://localhost:3000
 - JSON-server
 - Ant Design
 - Github OAuth
+- Firebase
 - Formik
-- Create React App
 
 ### Deploy on Vercel
+
+### Roles:
+Either 'student' role or 'author' role (task author) can be selected before authorization. 
