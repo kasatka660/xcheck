@@ -7,8 +7,8 @@ import firebase from "firebase";
 
 if (firebase.apps.length === 0) {
   firebase.initializeApp({
-    apiKey: "AIzaSyCr0kyqr-_V786T9uAIabmGLRn1YgexG14",
-    authDomain: "xcheck-a2bee.firebaseapp.com",
+    apiKey: "AIzaSyBqXOuTuDaMIqT5eSKeEg8d7mP_kaPSa3U",
+    authDomain: "x-check-93bcd.firebaseapp.com",
   });
 }
 
